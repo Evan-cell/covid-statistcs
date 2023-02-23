@@ -13,3 +13,6 @@ export const covidApi = createApi({
         getNews: builder.query({ query : () => '/api/news/get-coronavirus-news/0'})
     })
 })
+export const {
+    useGetNewsQuery
+} = covidApi
