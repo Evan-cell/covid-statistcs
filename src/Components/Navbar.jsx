@@ -1,4 +1,5 @@
 import React from 'react'
+// import {Link} from 'react-router-dom'
 function Navbar() {
   return (
     <div>
@@ -8,7 +9,7 @@ function Navbar() {
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <img 
-                className='h-8 w-8'
+                className='h-8 w-8 cursor-pointer'
                 src='https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg'
                 alt='covid'
                 />
@@ -21,7 +22,7 @@ function Navbar() {
                   <a href="/statistics" className='hover:bg-gray-600 text-white px-3 py-2 rounded-md text-sm font-medium'>
                     Statistics
                   </a>
-                  <a href="/statistics" className='hover:bg-gray-600 text-white px-3 py-2 rounded-md text-sm font-medium'>
+                  <a href="/cases" className='hover:bg-gray-600 text-white px-3 py-2 rounded-md text-sm font-medium'>
                     Cases
                   </a>
                 </div>
@@ -69,8 +70,30 @@ function Navbar() {
           </div>
         </div>
         {/* for mobile view */}
-        <div className='md:hidden'></div>
+        <div className='md:hidden' id='mobile-menu'>
+          <div className='px-2 pt-2 space-y-1 sm:px-3'>
+          <a href="/" className='hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium'>
+                    Covid
+                  </a>
+                  <a href="/statistics" className='hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium'>
+                    Statistics
+                  </a>
+                  <a href="/cases" className='hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium'>
+                    Cases
+                  </a>
+          </div>
+        </div>
       </nav>
+
+      <main>
+        <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+          {/* <!-- Replace with your content --> */}
+          <div className="px-4 py-6 sm:px-0">
+            <div className="border-4 border-dashed border-gray-200 rounded-lg h-96"></div>
+          </div>
+          {/* <!-- /End replace --> */}
+        </div>
+      </main>
     </div>
   )
 }
